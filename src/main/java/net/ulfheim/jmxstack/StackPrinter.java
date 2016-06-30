@@ -21,7 +21,9 @@ public class StackPrinter {
         long[] threadIds = threadMXBean.getAllThreadIds();
         ThreadInfo[] threadInfo = threadMXBean.getThreadInfo(threadIds, Integer.MAX_VALUE);
         for (ThreadInfo ti : threadInfo) {
-            printThreadInfo(ti);
+            if (ti != null) {
+                printThreadInfo(ti);
+            }
         }
     }
 

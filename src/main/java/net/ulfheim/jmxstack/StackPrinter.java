@@ -23,7 +23,6 @@ public class StackPrinter {
         for (ThreadInfo ti : threadInfo) {
             printThreadInfo(ti);
         }
-
     }
 
     private void printThreadInfo(ThreadInfo ti) {
